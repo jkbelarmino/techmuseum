@@ -1,0 +1,425 @@
+/* Global Font Setup */
+body {
+    font-family: "Inter", "Nunito", "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+/* Paragraphs & General Text */
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Navbar */
+.navbar {
+    font-family: "Inter", sans-serif;
+    padding: 15px 0;
+    background: #005fa3; /* Slightly darker blue for contrast */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #ffcc00; /* Highlight effect */
+}
+
+.nav-item a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+    transform: scale(1.1); /* Slight increase in size */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: url('assets/images/hero.png') no-repeat center center / cover;
+    color: white;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1 {
+    font-size: 48px; /* Increase heading size */
+    color: #fff; /* Ensure high contrast */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+}
+
+.hero p {
+    font-size: 22px; /* Increase subtext size */
+    color: #f4f4f4; /* Light grey for better contrast */
+    max-width: 700px; /* Prevent overly wide text */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.hero .container {
+    background: rgba(0, 0, 0, 0.6); /* Dark background with transparency */
+    padding: 20px; /* Adds space around the text */
+    border-radius: 8px; /* Softens edges */
+    display: inline-block; /* Keeps it contained */
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white; /* Ensures high contrast */
+    font-size: 16px;
+}
+
+.footer p {
+    color: #f4f4f4; /* Light gray for clarity */
+}
+
+/* Featured Exhibits Section */
+.exhibits {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.exhibits h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.exhibits h3 {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+/* Exhibit Navigation Buttons */
+.exhibit-nav {
+    margin-bottom: 50px;
+}
+
+.exhibit-nav .btn {
+    margin: 5px;
+    background-color: #0077cc;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.exhibit-nav .btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+.exhibit-card {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    text-align: center; /* Ensures any text remains centered */
+    flex-direction: column; /* Stacks image and text neatly */
+}
+
+.exhibit-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block; /* Prevents any inline spacing issues */
+}
+
+
+.exhibit-card h3 {
+    text-align: center; /* Centers the heading */
+    width: 100%; /* Ensures full width */
+    margin-top: 15px; /* Adds spacing above */
+}
+
+.exhibit-card {
+    background: white; /* Ensures visibility */
+    padding: 20px;
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+}
+
+.exhibit-card:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25); /* Slightly stronger shadow */
+    transform: scale(1.02); /* Adds a small pop-out effect */
+}
+
+
+/* Grid Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 350px;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #f9f9f9;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.cta-container {
+    margin-bottom: 30px; /* Adds spacing before the grid */
+}
+
+.btn-primary {
+    background-color: #0077cc; /* Consistent with exhibit theme */
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+
+    /* General Timeline Styles */
+.timeline {
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.timeline h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Timeline Content */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Individual Timeline Items */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #0077cc;
+}
+
+/* Year Box */
+.timeline-year {
+    flex: 0 0 100px; /* Ensures a fixed width */
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Details Box */
+.timeline-details {
+    flex: 1;
+}
+
+.timeline-details h3 {
+    font-size: 22px;
+    color: #0077cc;
+    margin-bottom: 15px;
+    line-height: 1.0;
+
+}
+
+.timeline-details p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Bold Emphasis */
+.bold {
+    font-weight: bold;
+    color: #0077cc;
+}
+
+/* Timeline Paragraph Indentation */
+.timeline-item p {
+    font-size: 18px;
+    color: #333;
+    margin-left: 0px; /* Indents the paragraph to the right */
+    text-indent: 0px; /* Adds a tab-like indentation */
+    line-height: 1.0;
+}
+
+/* Timeline Item Hover Effect */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #0077cc;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05); /* Slight increase in size */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow */
+}
+
+/* Change h3 color on hover */
+.timeline-item:hover h3 {
+    color: #570505;
+    font-weight: bold;
+}
+
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077cc;
+    border: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: background 0.3s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background-color: #005fa3;
+    transform: scale(1.1);
+}
+
+.exhibit-card h3 {
+    text-align: center; /* Centers the heading */
+    width: 100%; /* Ensures full width */
+    margin-top: 15px; /* Adds spacing above */
+}
+
+.spacer {
+    margin-top: 50px !important;
+}
+
+
+/* Debugging: Highlight all div elements */
+/*div {
+    border: 2px solid red !important; /* Ensures the red border is applied */
+}*/
+
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        justify-content: flex-end !important; /* Ensures items stay right-aligned */
+        text-align: right;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav .nav-item {
+        padding-right: 20px; /* Adds space on the right */
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-year {
+        width: 100%;
+        text-align: left;
+    }
+}
