@@ -264,13 +264,13 @@ p {
 /* Year Box */
 .timeline-year {
     flex: 0 0 100px; /* Ensures a fixed width */
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 150px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
     color: #333;
-    background: #fafafa;
+    background: #f3ebeb;
     padding: 15px;
     border-radius: 10px;
     display: flex;
@@ -326,11 +326,12 @@ p {
 .timeline-item:hover {
     transform: scale(1.05); /* Slight increase in size */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow */
+    border-left: 5px solid #cc0033;
 }
 
 /* Change h3 color on hover */
 .timeline-item:hover h3 {
-    color: #570505;
+    color: #cc0033;
     font-weight: bold;
 }
 
