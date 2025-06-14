@@ -31,9 +31,25 @@ p { font-size: 18px; color: #444; font-weight: 400; }
     color: white;
     text-align: center;
     padding: 80px 20px;
+    background: url('assets/images/hero.png') no-repeat center center / cover;
+
 }
-.hero-contact h1 { font-size: 36px; margin-bottom: 10px; }
-.hero-contact p { font-size: 20px; color:#fff; }
+.hero-contact h1 { 
+    font-size: 36px; 
+    margin-bottom: 10px;     
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+ }
+.hero-contact p { 
+    font-size: 20px; 
+    color:#fff;     
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+ }
+.hero-text {
+    background: rgba(0, 0, 0, 0.6); /* Dark background with transparency */
+    padding: 20px; /* Adds space around the text */
+    border-radius: 8px; /* Softens edges */
+    display: inline-block; /* Keeps it contained */
+}
 
 /* Contact Section */
 #contact {
