@@ -88,3 +88,4 @@ document.querySelectorAll(".timeline-node").forEach(node => {
         this.classList.add("clicked"); // Keep this node red
     });
 });
+
