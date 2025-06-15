@@ -1,0 +1,376 @@
+/* Global Font Setup */
+body {
+    font-family: "Inter", "Nunito", "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+/* Paragraphs & General Text */
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Navbar */
+.navbar {
+    font-family: "Inter", sans-serif;
+    padding: 15px 0;
+    background: #005fa3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: url('assets/images/hero.png') no-repeat center center / cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 22px;
+    color: #f4f4f4;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.footer p {
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* Featured Exhibits Section */
+.exhibits {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.exhibits h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Exhibit Navigation Buttons */
+.exhibit-nav {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.exhibit-nav .btn {
+    margin: 5px;
+    background-color: #0077cc;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.exhibit-nav .btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+/* Responsive Exhibit Card Layout */
+.exhibit-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ensure exhibit cards have a flexible width */
+.exhibit-card {
+    min-width: 300px; /* Prevents shrinking too much */
+    max-width: 100%; /* Allows full responsiveness */
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.exhibit-card:hover {
+    transform: scale(1.05);
+}
+
+/* Exhibit Card Image */
+.exhibit-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Year Formatting */
+.exhibit-card .year {
+    font-weight: bold;
+}
+
+.wrapper {
+    max-width: 1200px; 
+    margin: auto;
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.timeline-item {
+    display: none;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #0077cc;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.timeline-item.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/* Timeline Graph */
+.timeline-graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+    padding: 30px 0;
+}
+
+.timeline-graph::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0077cc;
+    transform: translateY(-50%);
+}
+
+/* Timeline Nodes */
+.timeline-node {
+    width: 20px;
+    height: 20px;
+    background-color: #0077cc; /* Default Blue */
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Outer circle effect */
+.timeline-node::before {
+    content: "";
+    position: absolute;
+    width: 35px; /* Larger than the inner dot */
+    height: 35px;
+    border: 2px solid #cc0033; /* Red outline */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show outer circle on hover */
+.timeline-node:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Keep outer circle visible when clicked */
+.timeline-node.clicked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Ensure year appears below the dot */
+.timeline-node::after {
+    content: attr(data-year); /* Uses the year from HTML */
+    position: absolute;
+    top: 30px; /* Adjust downward */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.timeline h4 {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+
+.timeline-node.highlight,
+.timeline-node.clicked {
+    background-color: #cc0033;
+    transform: scale(1.2);
+}
+
+/* Year Box */
+.timeline-year {
+    flex: 0 0 100px; /* Ensures a fixed width */
+    width: 125px;
+    height: 150px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    background: #f3ebeb;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline h2, .timeline-summary p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Video Container */
+.video-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container + p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077cc;
+    border: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background-color: #005fa3;
+    transform: scale(1.1);
+}
+
+
+/*debugger*/
+/*div {
+    border: 1px solid red !important;
+}*/
+
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .exhibit-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar-nav {
+        justify-content: flex-end;
+        text-align: right;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-year {
+        width: 100%;
+        text-align: left;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .exhibit-container {
+        grid-template-columns: 1fr;
+    }
+}

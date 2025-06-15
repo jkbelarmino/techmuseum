@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Other Exhibit - Tech Museum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="assets/js/flip-card.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-museum"></i> Tech Museum</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="fa-solid fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#timeline"><i class="fa-solid fa-clock"></i> Timeline</a></li>
+                <li class="nav-item"><a class="nav-link" href="featured-exhibits.html"><i class="fa-solid fa-box-open"></i> Exhibits</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="hero exhibits-hero">
+    <div class="container">
+        <h1>Other Exhibit</h1>
+        <p>Miscellaneous tech history, from industry pioneers to unique gadgets.</p>
+    </div>
+</header>
+<div class="spacer">&nbsp;</div>
+<div class="container">
+    <div class="row">
+
+        
+<div class="col-md-4 col-sm-6 col-12 exhibit-card">
+    <img src="assets/images/all/1983-2006_Bellsouth.jpg" alt="BellSouth Telecommunications">
+    <h3>BellSouth Telecommunications</h3>
+    <p>A major U.S. telecommunications company that operated from the 1980s until its merger with AT&T.</p>
+    <p class="year">Year: 1983-2006</p>
+</div>
+
+<div class="col-md-4 col-sm-6 col-12 exhibit-card">
+    <img src="assets/images/all/1988_RedfoxTechnologiesPhilippines.jpg" alt="Redfox Technologies (Philippines)">
+    <h3>Redfox Technologies (Philippines)</h3>
+    <p>A Philippine technology brand known for affordable computing solutions and consumer electronics.</p>
+    <p class="year">Year: 1988</p>
+</div>
+
+<div class="col-md-4 col-sm-6 col-12 exhibit-card">
+    <img src="assets/images/all/1990s-mid2000s_TowerRecords_Makati.jpg" alt="Tower Records Makati">
+    <h3>Tower Records Makati</h3>
+    <p>A popular music retail store in the Philippines, known for selling CDs, vinyl, and cassette tapes.</p>
+    <p class="year">Year: 1990s - Mid 2000s</p>
+</div>
+
+<div class="col-md-4 col-sm-6 col-12 exhibit-card">
+    <img src="assets/images/all/1997-2020_CDR_King_Shop.jpg" alt="CD-R King Shop">
+    <h3>CD-R King Shop</h3>
+    <p>An electronics store offering affordable tech accessories, active from the late '90s to 2020.</p>
+    <p class="year">Year: 1997-2020</p>
+</div>
+
+<div class="col-md-4 col-sm-6 col-12 exhibit-card">
+    <img src="assets/images/all/2007_MyPhone.jpg" alt="MyPhone">
+    <h3>MyPhone</h3>
+    <p>The first local mobile brand in the Philippines, introducing dual-SIM technology.</p>
+    <p class="year">Year: 2007</p>
+</div>
+
+
+<div class="col-md-4 col-sm-6 col-12 exhibit-card">
+    <img src="assets/images/all/2009_CherryMobileLogo.jpg" alt="Cherry Mobile Logo">
+    <h3>Cherry Mobile</h3>
+    <p>Cherry Mobile launched in 2009 in the Philippines. It focused on affordable smartphones with dual and triple SIM technology. The brand expanded into Android and Windows phones and partnered with Google for Android One in 2015.</p>
+    <p class="year">Year: 2009</p>
+</div>
+
+        
+        
+
+    </div>
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+
+<!-- Navigation Buttons -->
+<div class="exhibit-nav text-center mb-4">
+    <a href="featured-exhibits-all.html" class="btn btn-primary">View All</a>
+    <a href="featured-exhibits-accessories.html" class="btn btn-primary">Accessories</a>
+    <a href="featured-exhibits-consoles.html" class="btn btn-primary">Computers & Game Consoles</a>
+    <a href="featured-exhibits-websites.html" class="btn btn-primary">Internet & Web Services</a>
+    <a href="featured-exhibits-media-players.html" class="btn btn-primary">Media Players</a>
+    <a href="featured-exhibits-phones.html" class="btn btn-primary">Phones</a>
+    <a href="featured-exhibits-other.html" class="btn btn-primary">Others</a>
+</div>
+
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTop" class="btn btn-primary">
+    <i class="fa fa-arrow-up"></i> Back to Top
+</button>
+
+<script>
+    // Show/hide Back to Top button based on scroll position
+    window.onscroll = function () {
+        var button = document.getElementById("backToTop");
+        if (document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function topFunction() {
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Tech Museum | Designed with history in mind</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

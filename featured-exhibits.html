@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Featured Exhibits - Tech Museum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-museum"></i> Tech Museum</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="fa-solid fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#timeline"><i class="fa-solid fa-clock"></i> Timeline</a></li>
+                <li class="nav-item"><a class="nav-link" href="featured-exhibits.html"><i class="fa-solid fa-box-open"></i> Exhibits</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Header -->
+    <header class="hero exhibits-hero">
+        <div class="container">
+            <h1>Featured Exhibits</h1>
+            <p>Discover iconic tech innovations that shaped history.</p>
+        </div>
+    </header>
+
+    <!-- Exhibit Sections -->
+    <section class="exhibits">
+        <div class="container">
+            <h2>Explore the Collections</h2>
+
+            <!-- Call-to-Action Button -->
+<div class="cta-container text-center">
+    <a href="featured-exhibits-all.html" class="btn btn-primary btn-lg">View All Exhibits</a>
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+
+             <!-- Exhibits Grid -->
+            <div class="row">
+              
+                <div class="col-md-4 exhibit-card" id="accessories">
+    <img src="assets/cards/accessories.jpg" alt="Accessories">
+    <h3>Accessories</h3>
+    <p>From classic wearables to high-tech enhancements.</p>
+    <a href="featured-exhibits-accessories.html" class="btn btn-primary">Accessories</a>
+</div>
+
+<div class="col-md-4 exhibit-card" id="consoles">
+    <img src="assets/cards/computers.jpg" alt="Computer Systems & Handhelds">
+    <h3>Computer Systems & Handhelds</h3>
+    <p>From retro systems to advanced computing devices.</p>
+    <a href="featured-exhibits-computers.html" class="btn btn-primary">Computer Systems & Handhelds</a>
+</div>
+
+<div class="col-md-4 exhibit-card" id="consoles">
+    <img src="assets/cards/consoles.jpg" alt="Computers & Game Consoles">
+    <h3>Game Consoles</h3>
+    <p>From retro gaming systems to advanced computing.</p>
+    <a href="featured-exhibits-consoles.html" class="btn btn-primary">Computers & Game Consoles</a>
+</div>
+
+<div class="col-md-4 exhibit-card" id="websites">
+    <img src="assets/cards/websites.jpg" alt="Internet & Web Services">
+    <h3>Internet & Web Services</h3>
+    <p>The evolution of the digital world and online platforms.</p>
+    <a href="featured-exhibits-websites.html" class="btn btn-primary">Internet & Web Services</a>
+</div>
+
+<div class="col-md-4 exhibit-card" id="media-players">
+    <img src="assets/cards/media-players.jpg" alt="Media Players">
+    <h3>Media Players</h3>
+    <p>From analog classics to modern streaming devices.</p>
+    <a href="featured-exhibits-media-players.html" class="btn btn-primary">Media Players</a>
+</div>
+
+<div class="col-md-4 exhibit-card" id="phones">
+    <img src="assets/cards/phones.jpg" alt="Phones">
+    <h3>Phones</h3>
+    <p>The journey from landlines to cutting-edge smartphones.</p>
+    <a href="featured-exhibits-phones.html" class="btn btn-primary">Phones</a>
+</div>
+
+<div class="col-md-4 exhibit-card" id="other">
+    <img src="assets/cards/other.jpg" alt="Others">
+    <h3>Others</h3>
+    <p>Miscellaneous tech history, from industry pioneers to unique gadgets.</p>
+    <a href="featured-exhibits-other.html" class="btn btn-primary">Others</a>
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTop" class="btn btn-primary">
+    <i class="fa fa-arrow-up"></i> Back to Top
+</button>
+
+<script>
+    // Show/hide Back to Top button based on scroll position
+    window.onscroll = function () {
+        var button = document.getElementById("backToTop");
+        if (document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function topFunction() {
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tech Museum | Designed with history in mind</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Tech Museum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-museum"></i> Tech Museum</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="fa-solid fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#timeline"><i class="fa-solid fa-clock"></i> Timeline</a></li>
+                <li class="nav-item"><a class="nav-link" href="featured-exhibits.html"><i class="fa-solid fa-box-open"></i> Exhibits</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Explore the Evolution of Technology</h1>
+            <p>A journey through history, innovation, and design.</p>
+        </div>
+    </header>
+
+    <!-- Timeline Section -->
+
+<section class="timeline" id="timeline">
+    <div class="container">
+        <h2>Technology Timeline</h2>
+        
+<section class="timeline-summary" id="timeline-summary">
+    <div class="container">
+        <p>Over the decades, technology has transformed our lives through innovation.</p>
+
+        <div class="spacer">&nbsp;</div>
+
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/NoX6mOg2EZQ" frameborder="0" allowfullscreen></iframe>
+</div>
+<p>Video courtesy of <a href="https://www.youtube.com/channel/UCAFpbE-30mJmJHf3UJo_FjQ" target="_blank">YouTube Channel: Amit Ramesh</a>.</p>
+
+
+<div class="spacer">&nbsp;</div>
+
+
+    </div>
+</section>
+
+        <h4>Click on the timeline year to show the card information</h4>
+        <div class="timeline-content">
+
+
+    <!--Interactive Section -->
+
+ <div class="timeline-graph">
+    <div class="timeline-node" data-year="1980s"></div>
+    <div class="timeline-node" data-year="1990s"></div>
+    <div class="timeline-node" data-year="2000s"></div>
+    <div class="timeline-node" data-year="2010s"></div>
+    <div class="timeline-node" data-year="2020s"></div>
+</div>
+
+
+
+    <!--Interactive Section -->
+
+
+            <div class="timeline-item">
+                <div class="timeline-year">1980s</div>
+                <div class="timeline-details">
+                    <h3>The Rise of Personal Computing</h3>
+                    <p>IBM launches the first <span class="bold">IBM PC</span> (1981), revolutionizing personal computing.</p>
+                    <p>Apple introduces the <span class="bold">Macintosh</span> (1984), bringing graphical user interfaces to the mainstream.</p>
+                    <p><span class="bold">CD-ROM</span> technology emerges, enabling digital storage and multimedia applications (1985).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">1990s</div>
+                <div class="timeline-details">
+                    <h3>The Internet Boom</h3>
+                    <p>The <span class="bold">World Wide Web</span> is invented by Tim Berners-Lee (1991), changing global communication.</p>
+                    <p>Microsoft releases <span class="bold">Windows 95</span> (1995), introducing the Start Menu and Plug & Play.</p>
+                    <p><span class="bold">Google</span> is founded (1998), setting the stage for modern search engines.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2000s</div>
+                <div class="timeline-details">
+                    <h3>Mobile & Social Media Revolution</h3>
+                    <p>Apple launches the <span class="bold">iPod</span> (2001), transforming digital music consumption.</p>
+                    <p><span class="bold">Facebook</span> is founded (2004), marking the rise of social networking.</p>
+                    <p>The first <span class="bold">iPhone</span> is released (2007), revolutionizing smartphones.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2010s</div>
+                <div class="timeline-details">
+                    <h3>AI & Cloud Computing</h3>
+                    <p><span class="bold">Cloud computing</span> becomes mainstream with services like AWS and Google Cloud (2010s).</p>
+                    <p>AI-powered assistants like <span class="bold">Siri</span> and <span class="bold">Alexa</span> emerge (2011-2014).</p>
+                    <p><span class="bold">Blockchain</span> technology gains traction with Bitcoin (2010s).</p>
+                </div>
+            </div>
+
+           <div class="timeline-item">
+    <div class="timeline-year">2020s</div>
+    <div class="timeline-details">
+        <h3>The Era of AI & Quantum Computing</h3>
+        <p><span class="bold">Artificial Intelligence</span> transforms industries with advanced automation, decision-making, and content generation (2020s).</p>
+  
+        <p><span class="bold">Quantum Computing</span> accelerates breakthroughs in cryptography, simulations, and optimization, reshaping computing power (2020s).</p>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Featured Exhibits -->
+    <section class="exhibits" id="exhibits">
+    <div class="container">
+        <h2>Featured Exhibits</h2>
+
+                <!-- Navigation Buttons -->
+        <div class="exhibit-nav text-center mb-4">
+                <a href="featured-exhibits-all.html" class="btn btn-primary">View All</a>
+                <a href="featured-exhibits-consoles.html" class="btn btn-primary">Consoles</a>
+                <a href="featured-exhibits-phones.html" class="btn btn-primary">Phones</a>
+                <a href="featured-exhibits-media-players.html" class="btn btn-primary">Media Players</a>
+                <a href="featured-exhibits-accessories.html" class="btn btn-primary">Accessories</a>
+                <a href="featured-exhibits-websites.html" class="btn btn-primary">Websites</a>
+                <a href="featured-exhibits-other.html" class="btn btn-primary">Other</a>
+             </div>
+
+
+    </div>
+    </section>
+
+    <!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTop" class="btn btn-primary">
+    <i class="fa fa-arrow-up"></i> Back to Top
+</button>
+
+<script>
+    // Show/hide Back to Top button based on scroll position
+    window.onscroll = function () {
+        var button = document.getElementById("backToTop");
+        if (document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function topFunction() {
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tech Museum | Designed with history in mind</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="javascript.js"></script>
+
+
+</body>
+</html>
