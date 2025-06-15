@@ -89,3 +89,30 @@ document.querySelectorAll(".timeline-node").forEach(node => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineNodes = document.querySelectorAll(".timeline-node");
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    const displayArea = document.getElementById("timeline-display");
+
+    // Click effect: Show corresponding timeline item and stop previous video
+    timelineNodes.forEach(node => {
+        node.addEventListener("click", function () {
+            let year = this.getAttribute("data-year");
+
+            // Stop any currently playing YouTube videos
+            document.querySelectorAll(".timeline-video iframe").forEach(iframe => {
+                iframe.src = iframe.src; // Reloads the iframe to stop playback
+            });
+
+            // Find the corresponding timeline item
+            const selectedItem = Array.from(timelineItems).find(item => 
+                item.querySelector(".timeline-year").textContent.trim() === year
+            );
+
+            if (selectedItem) {
+                // Update the fixed display area with the selected timeline item
+                displayArea.innerHTML = selectedItem.outerHTML;
+            }
+        });
+    });
+});

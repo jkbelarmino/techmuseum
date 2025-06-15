@@ -378,7 +378,7 @@ p {
 /* Responsive Design */
 @media screen and (max-width: 800px) {
     .exhibit-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .navbar-nav {
@@ -431,12 +431,15 @@ p {
 @media screen and (max-width: 800px) { /* Tablet & Mobile */
     .exhibit-container {
         display: flex;
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; /* Stack items */
+        align-items: center; /* Center the cards */
         gap: 20px; /* Adds spacing */
+        padding: 0;
     }
 
     .exhibit-card {
-        width: 100%; /* Ensure full width */
-        max-width: none; /* Removes any width restrictions */
+        width: 90%; /* Avoid full-screen stretching */
+        max-width: 400px; /* Limits expansion */
+        box-sizing: border-box; /* Prevents overflow */
     }
 }
