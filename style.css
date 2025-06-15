@@ -376,9 +376,9 @@ p {
 
 
 /* Responsive Design */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 800px) {
     .exhibit-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .navbar-nav {
@@ -388,7 +388,7 @@ p {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .timeline-item {
         flex-direction: column;
         align-items: flex-start;
@@ -410,7 +410,7 @@ p {
     }
 }
 
-@media (max-width: 768px) { /* Tablet & Mobile */
+@media (max-width: 800px) { /* Tablet & Mobile */
     .bottom-timeline-graph {
         display: flex; /* Show only on mobile/tablet */
         justify-content: space-between;
@@ -425,5 +425,18 @@ p {
 @media (min-width: 769px) { /* Desktop */
     .bottom-timeline-graph {
         display: none; /* Hide on larger screens */
+    }
+}
+
+@media screen and (max-width: 800px) { /* Tablet & Mobile */
+    .exhibit-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Adds spacing */
+    }
+
+    .exhibit-card {
+        width: 100%; /* Ensure full width */
+        max-width: none; /* Removes any width restrictions */
     }
 }
