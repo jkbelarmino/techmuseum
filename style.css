@@ -626,3 +626,13 @@ p {
     }
 }
 
+@media (max-width: 1024px) { /* Applies to tablets and smaller devices */
+    .timeline-year {
+        writing-mode: horizontal-tb; /* Makes text horizontal */
+        transform: none; /* Removes rotation */
+        width: 100%;
+        height: auto;
+        font-size: 24px; /* Adjust font size for mobile */
+        padding: 10px;
+    }
+}
