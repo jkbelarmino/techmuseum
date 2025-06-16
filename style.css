@@ -400,6 +400,29 @@ p {
 
 
 /* Responsive Design */
+
+
+@media screen and (max-width: 900px) { /* Tablet & Mobile */
+    .nav-scroll {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px;
+        display: flex;
+        gap: 15px;
+        scrollbar-width: none; /* Hides scrollbar */
+    }
+
+    .nav-scroll::-webkit-scrollbar {
+        display: none; /* Hides scrollbar on WebKit browsers */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
 @media screen and (max-width: 900px) {
     .exhibit-container {
         grid-template-columns: repeat(1, 1fr);
