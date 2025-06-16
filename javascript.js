@@ -96,3 +96,45 @@ document.querySelectorAll('.exhibit-card').forEach(card => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineNodes = document.querySelectorAll(".timeline-node");
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    const videoContainer = document.querySelector(".video-container iframe");
+    const videoCreditContainer = document.querySelector(".video-container p"); // Selects the credit paragraph
+
+    timelineNodes.forEach(node => {
+        node.addEventListener("click", function () {
+            let year = this.getAttribute("data-year");
+
+            // Stop currently playing videos
+            document.querySelectorAll(".timeline-video iframe").forEach(iframe => {
+                iframe.src = iframe.src; // Resets video playback
+            });
+
+            // Find the correct timeline item
+            const selectedItem = Array.from(timelineItems).find(item => 
+                item.querySelector(".timeline-year").textContent.trim() === year
+            );
+
+            if (selectedItem) {
+                // Move the video
+                const timelineVideo = selectedItem.querySelector(".timeline-video iframe");
+                if (timelineVideo) {
+                    videoContainer.src = timelineVideo.src; // Updates video container
+                }
+
+                // Move the corresponding video credit
+                const videoCredit = selectedItem.querySelector(".timeline-video p");
+                if (videoCredit) {
+                    videoCreditContainer.innerHTML = videoCredit.innerHTML; // Updates video credit text
+                }
+            }
+
+            // Highlight clicked node
+            timelineNodes.forEach(n => n.classList.remove("highlight", "clicked"));
+            this.classList.add("highlight", "clicked");
+        });
+    });
+});

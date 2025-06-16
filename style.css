@@ -336,7 +336,7 @@ p {
 .timeline-year {
     flex: 0 0 100px; /* Ensures a fixed width */
     width: 100px;
-    height: 350px;
+    height: 200px;
     text-align: center;
     font-size: 45px;
     font-weight: bold;
@@ -356,8 +356,13 @@ p {
     margin: 0 auto;
 }
 
+.timeline-video iframe {
+    display: none; /* Hides only the video inside the timeline item */
+}
+
 .timeline-video p {
-    font-size: 12px; /* Adjust as needed */
+    display: none; /* Hide the video credit inside timeline-video */
+/*    font-size: 12px; /* Adjust as needed */
 }
 
 .timeline-video iframe {
