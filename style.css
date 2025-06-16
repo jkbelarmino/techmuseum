@@ -34,11 +34,32 @@ p {
     font-weight: bold;
 }
 
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adds uniform spacing */
+}
+
+
 .navbar-nav .nav-item a:hover {
     color: #ffcc00;
     transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5); /* Soft grey shadow */
     transition: 0.3s ease-in-out;
 }
+
+.nav-link i {
+    margin-right: 10px; /* Adds space after the icon */
+    display: inline-block; /* Ensures spacing behaves correctly */
+}
+
+
+.nav-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
 
 /* Hero Section */
 .hero {
@@ -375,7 +396,7 @@ p {
 /*debugger*/
 /*div {
     border: 1px solid red !important;
-}*/
+/*}*/
 
 
 /* Responsive Design */
@@ -385,11 +406,27 @@ p {
     }
 
     .navbar-nav {
-        justify-content: flex-end;
-        text-align: right;
+        justify-content: center;
+        text-align: center;
         width: 100%;
     }
 }
+
+@media screen and (max-width: 900px) { /* Mobile */
+    .navbar-nav {
+        display: flex;
+        overflow-x: auto; /* Enables horizontal scrolling */
+        white-space: nowrap; /* Prevents wrapping */
+        gap: 15px; /* Adds spacing between items */
+        padding: 10px;
+        scrollbar-width: none; /* Hides scrollbar (optional) */
+    }
+
+    .navbar-nav::-webkit-scrollbar {
+        display: none; /* Hides scrollbar for WebKit browsers */
+    }
+}
+
 
 @media screen and (max-width: 900px) {
     .timeline-item {
