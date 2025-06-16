@@ -232,7 +232,7 @@ p {
 .timeline-item {
     display: none;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
     background: white;
     padding: 20px;
     border-left: 5px solid #0077cc;
@@ -325,6 +325,31 @@ p {
     margin: 20px auto;
 }
 
+.timeline-year-container {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+}
+
+.timeline-year {
+    margin: 0;
+    padding: 0px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.timeline-img {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-img img {
+    width: 150px;
+    height: 215px;
+    border-radius: 5px; /* Optional styling */
+    display: block;
+    margin-right: 20px; /* Moves image slightly to the left */
+    margin-left: -10px;
+}
+
 
 .timeline-node.highlight,
 .timeline-node.clicked {
@@ -336,7 +361,7 @@ p {
 .timeline-year {
     flex: 0 0 100px; /* Ensures a fixed width */
     width: 100px;
-    height: 200px;
+    height: 215px;
     text-align: center;
     font-size: 45px;
     font-weight: bold;
@@ -501,14 +526,19 @@ p {
 }
 
 
-/*debugger*/
-/*div {
+/*debugger*/ /*
+div {
     border: 1px solid red !important;
-/*}*/
+}*/
 
 
 /* Responsive Design */
 
+@media (max-width: 1024px) {
+    .timeline-img {
+        display: none; /* Hides the image on tablet and mobile */
+    }
+}
 
 @media screen and (max-width: 900px) { /* Tablet & Mobile */
     .nav-scroll {
@@ -659,5 +689,6 @@ p {
         height: auto;
         font-size: 24px; /* Adjust font size for mobile */
         padding: 10px;
+        margin-bottom: 20px; /* Adds space below timeline year */
     }
 }
