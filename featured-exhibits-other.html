@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Other Exhibit - Tech Museum</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_flip.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="assets/js/flip-card.js"></script>
 </head>
 <body>
 
@@ -42,48 +41,100 @@
     <div class="row">
 
         
-<div class="col-md-4 exhibit-card">
-    <img src="assets/images/all/1983-2006_Bellsouth.jpg" alt="BellSouth Telecommunications">
-    <h3>BellSouth Telecommunications</h3>
-    <p>A major U.S. telecommunications company that operated from the 1980s until its merger with AT&T.</p>
-    <p class="year">Year: 1983-2006</p>
+<div class="col-md-4 exhibit-card" onclick="flipCard(this)">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="assets/images/all/1983-2006_Bellsouth.jpg" alt="BellSouth Telecommunications">
+            <h3>BellSouth Telecommunications</h3>
+            <p>A major U.S. telecommunications company that operated from the 1980s until its merger with AT&T.</p>
+            <p class="year">Year: 1983-2006</p>
+        </div>
+        <div class="card-back">
+            <h3>More Info</h3>
+            <p>BellSouth played a key role in shaping modern telecom services before merging with AT&T.</p>
+        </div>
+    </div>
 </div>
 
-<div class="col-md-4 exhibit-card">
-    <img src="assets/images/all/1988_RedfoxTechnologiesPhilippines.jpg" alt="Redfox Technologies (Philippines)">
-    <h3>Redfox Technologies (Philippines)</h3>
-    <p>A Philippine technology brand known for affordable computing solutions and consumer electronics.</p>
-    <p class="year">Year: 1988</p>
-</div>
-
-<div class="col-md-4 exhibit-card">
-    <img src="assets/images/all/1990s-mid2000s_TowerRecords_Makati.jpg" alt="Tower Records Makati">
-    <h3>Tower Records Makati</h3>
-    <p>A popular music retail store in the Philippines, known for selling CDs, vinyl, and cassette tapes.</p>
-    <p class="year">Year: 1990s - Mid 2000s</p>
-</div>
-
-<div class="col-md-4 exhibit-card">
-    <img src="assets/images/all/1997-2020_CDR_King_Shop.jpg" alt="CD-R King Shop">
-    <h3>CD-R King Shop</h3>
-    <p>An electronics store offering affordable tech accessories, active from the late '90s to 2020.</p>
-    <p class="year">Year: 1997-2020</p>
-</div>
-
-<div class="col-md-4 exhibit-card">
-    <img src="assets/images/all/2007_MyPhone.jpg" alt="MyPhone">
-    <h3>MyPhone</h3>
-    <p>The first local mobile brand in the Philippines, introducing dual-SIM technology.</p>
-    <p class="year">Year: 2007</p>
+<div class="col-md-4 exhibit-card" onclick="flipCard(this)">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="assets/images/all/1988_RedfoxTechnologiesPhilippines.jpg" alt="Redfox Technologies (Philippines)">
+            <h3>Redfox Technologies (Ph)</h3>
+            <p>A Philippine technology brand known for affordable computing solutions and consumer electronics.</p>
+            <p class="year">Year: 1988</p>
+        </div>
+        <div class="card-back">
+            <h3>More Info</h3>
+            <p>Redfox Technologies became well known for providing local computing solutions, competing with global brands by offering cost-effective alternatives in the Philippine market.</p>
+        </div>
+    </div>
 </div>
 
 
-<div class="col-md-4 exhibit-card">
-    <img src="assets/images/all/2009_CherryMobileLogo.jpg" alt="Cherry Mobile Logo">
-    <h3>Cherry Mobile</h3>
-    <p>Cherry Mobile launched in 2009 in the Philippines. It focused on affordable smartphones with dual and triple SIM technology. The brand expanded into Android and Windows phones and partnered with Google for Android One in 2015.</p>
-    <p class="year">Year: 2009</p>
+<div class="col-md-4 exhibit-card" onclick="flipCard(this)">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="assets/images/all/1990s-mid2000s_TowerRecords_Makati.jpg" alt="Tower Records Makati">
+            <h3>Tower Records Makati</h3>
+            <p>A popular music retail store in the Philippines, known for selling CDs, vinyl, and cassette tapes.</p>
+            <p class="year">Year: 1990s - Mid 2000s</p>
+        </div>
+        <div class="card-back">
+            <h3>More Info</h3>
+            <p>Tower Records Makati was a go-to destination for music lovers, offering a vast collection of physical media formats. It became a cultural hub before the decline of physical music retail.</p>
+        </div>
+    </div>
 </div>
+
+
+<div class="col-md-4 exhibit-card" onclick="flipCard(this)">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="assets/images/all/1997-2020_CDR_King_Shop.jpg" alt="CD-R King Shop">
+            <h3>CD-R King Shop</h3>
+            <p>An electronics store offering affordable tech accessories, active from the late '90s to 2020.</p>
+            <p class="year">Year: 1997-2020</p>
+        </div>
+        <div class="card-back">
+            <h3>More Info</h3>
+            <p>CD-R King was known for offering budget-friendly tech products, from blank CDs to peripherals. It became a staple in local electronics retail until its closure in 2020.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 exhibit-card" onclick="flipCard(this)">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="assets/images/all/2007_MyPhone.jpg" alt="MyPhone">
+            <h3>MyPhone</h3>
+            <p>The first local mobile brand in the Philippines, introducing dual-SIM technology.</p>
+            <p class="year">Year: 2007</p>
+        </div>
+        <div class="card-back">
+            <h3>More Info</h3>
+            <p>MyPhone revolutionized the Philippine mobile market by offering affordable dual-SIM phones, catering to users who needed multiple network options.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 exhibit-card" onclick="flipCard(this)">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="assets/images/all/2009_CherryMobileLogo.jpg" alt="Cherry Mobile Logo">
+            <h3>Cherry Mobile</h3>
+            <p>Launched in 2009, introduced budget smartphones with multiple SIMs and later partnered with Google for Android One in 2015.</p>
+            <p class="year">Year: 2009</p>
+        </div>
+        <div class="card-back">
+            <h3>More Info</h3>
+            <p>Cherry Mobile revolutionized budget-friendly mobile devices in the Philippines, introducing cost-effective smartphones with innovative SIM technology. Its partnership with Google for Android One solidified its presence in the global market.</p>
+        </div>
+    </div>
+</div>
+
 
         
         
