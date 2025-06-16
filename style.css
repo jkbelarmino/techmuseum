@@ -103,15 +103,18 @@ p {
 
 .exhibit-nav .btn {
     margin: 5px;
-    background-color: #0077cc;
+    background-color: #f0d647;
+    color: #000000;
     border: none;
     font-size: 18px;
+    font-weight: 500;
     padding: 10px 20px;
     transition: background 0.3s, transform 0.2s;
 }
 
 .exhibit-nav .btn:hover {
-    background-color: #005fa3;
+    background-color: #db8f03;
+    font-weight: bold;
     transform: scale(1.05);
 }
 
@@ -404,7 +407,7 @@ p {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 900px) {
     .exhibit-container {
         grid-template-columns: 1fr;
     }
@@ -443,3 +446,4 @@ p {
         box-sizing: border-box; /* Prevents overflow */
     }
 }
+
