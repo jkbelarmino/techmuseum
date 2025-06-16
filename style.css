@@ -450,6 +450,42 @@ p {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .nav-link {
+        padding: 0px 0px !important; /* Reduces vertical padding */
+    }
+
+    .navbar-nav .nav-item {
+        line-height: 1.0 !important; /* Compresses space between links */
+        margin-bottom: 10px !important; /* Adjust vertical spacing */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-link {
+        font-size: 20px !important; /* Increases text size */
+        padding: 12px 20px; /* Adds more button-like spacing */
+        display: block; /* Ensures full-width tap area */
+        text-align: center; /* Centers text */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 8px; /* Adds slight vertical spacing */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-link {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2); /* Slight enlargement */
+    }
+}
+
+
+
 
 @media screen and (max-width: 900px) {
     .timeline-item {
