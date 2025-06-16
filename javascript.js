@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const timelineNodes = document.querySelectorAll(".timeline-node");
     const timelineItems = document.querySelectorAll(".timeline-item");
-    const displayArea = document.getElementById("timeline-display");
 
-    // Auto-display the 1980s timeline item
+    // Ensure only the 1980s timeline item is visible at the start
     timelineItems.forEach(item => {
+        item.classList.remove("active"); // Hide all items
         if (item.querySelector(".timeline-year").textContent.trim() === "1980s") {
             item.classList.add("active");
         }
@@ -13,39 +13,47 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineNodes.forEach(node => {
         // Highlight the default 1980s node
         if (node.getAttribute("data-year") === "1980s") {
-            node.classList.add("highlight");
+            node.classList.add("highlight", "clicked");
         }
 
-        // Click effect: Show corresponding timeline item and stop previous video
+        // Click effect: Show matching timeline item and stop previous video
         node.addEventListener("click", function () {
             let year = this.getAttribute("data-year");
 
-            // Stop any currently playing YouTube videos
+            // Stop currently playing YouTube videos
             document.querySelectorAll(".timeline-video iframe").forEach(iframe => {
-                iframe.src = iframe.src; // Reloads the iframe to stop playback
+                iframe.src = iframe.src; // Reloads iframe to stop playback
             });
 
-            // Find and display the correct timeline item
-            const selectedItem = Array.from(timelineItems).find(item => 
-                item.querySelector(".timeline-year").textContent.trim() === year
-            );
+            // Hide all timeline items before displaying the correct one
+            timelineItems.forEach(item => item.classList.remove("active"));
 
-            if (selectedItem) {
-                displayArea.innerHTML = selectedItem.outerHTML;
-            }
+            // Find and activate the matching timeline item
+            timelineItems.forEach(item => {
+                if (item.querySelector(".timeline-year").textContent.trim() === year) {
+                    item.classList.add("active");
+                }
+            });
 
-            // Remove highlights from all nodes, then add to clicked one
-            timelineNodes.forEach(n => n.classList.remove("highlight", "clicked"));
+            // Remove highlights from all nodes except the clicked one
+            timelineNodes.forEach(n => {
+                if (n !== this) {
+                    n.classList.remove("highlight", "clicked");
+                }
+            });
+
             this.classList.add("highlight", "clicked");
         });
 
         // Hover effect for timeline nodes
         node.addEventListener("mouseenter", function () {
-            node.classList.add("highlight");
+            this.classList.add("highlight");
         });
 
         node.addEventListener("mouseleave", function () {
-            node.classList.remove("highlight");
+            if (!this.classList.contains("clicked")) {
+                this.classList.remove("highlight");
+            }
         });
     });
 });
@@ -79,15 +87,12 @@ function flipCard(card) {
 
 document.querySelectorAll('.exhibit-card').forEach(card => {
     card.addEventListener("click", function () {
-        this.classList.toggle("flipped");
-
-        // Ensure flip card stacks properly
-        this.style.zIndex = this.classList.contains("flipped") ? "10" : "1";
-
-        // Flip back after leaving
-        this.addEventListener("mouseleave", () => {
+        if (!this.classList.contains("flipped")) {
+            this.classList.add("flipped");
+            this.style.zIndex = "10";
+        } else {
             this.classList.remove("flipped");
-            this.style.zIndex = "1"; // Restore stacking order
-        });
+            this.style.zIndex = "1";
+        }
     });
 });
