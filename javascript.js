@@ -101,8 +101,8 @@ document.querySelectorAll('.exhibit-card').forEach(card => {
 document.addEventListener("DOMContentLoaded", function () {
     const timelineNodes = document.querySelectorAll(".timeline-node");
     const timelineItems = document.querySelectorAll(".timeline-item");
-    const videoContainer = document.querySelector(".video-container iframe");
-    const videoCreditContainer = document.querySelector(".video-container p"); // Selects the credit paragraph
+    const videoContainer = document.querySelector(".video-container1 iframe");
+    const videoCreditContainer = document.querySelector(".video-container1 p"); // Selects the credit paragraph
 
     timelineNodes.forEach(node => {
         node.addEventListener("click", function () {
@@ -138,3 +138,49 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function adjustVideoContainer() {
+    const videoContainer = document.querySelector(".video-container1");
+
+    if (window.innerWidth > 1023) { // PC view
+        videoContainer.style.width = "1023px";
+        videoContainer.style.height = "500px";
+    } else { // Mobile & tablet responsiveness
+        videoContainer.style.width = "100%"; // Ensures adaptability
+        videoContainer.style.height = "auto"; // Allows natural scaling
+    }
+}
+
+// Run function on resize & page load
+window.addEventListener("resize", adjustVideoContainer);
+adjustVideoContainer(); // Initial execution
+
+
+
+// New Code Goes Here
+const exhibitScroll = document.querySelector(".exhibit-scroll");
+const indicators = document.querySelectorAll(".indicator-line");
+const exhibits = document.querySelectorAll(".full-width-exhibit");
+
+let currentIndex = 0;
+
+// Scroll function for auto-scrolling only
+function scrollToExhibit(index) {
+    const targetScroll = index * exhibitScroll.clientWidth;
+    exhibitScroll.scrollTo({ left: targetScroll, behavior: "smooth" });
+
+    updateIndicator(index);
+}
+
+// Function to update indicator lines
+function updateIndicator(index) {
+    indicators.forEach((line, i) => {
+        line.classList.toggle("active", i === index);
+    });
+}
+
+// Auto-scroll every 4 seconds
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % exhibits.length;
+    scrollToExhibit(currentIndex);
+}, 4000);
