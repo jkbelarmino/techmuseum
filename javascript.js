@@ -142,3 +142,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // New Code Goes Here
+const videoCreditContainer = document.querySelector(".video-credits");
+const selectedItem = Array.from(timelineItems).find(item =>
+    item.querySelector(".timeline-year").textContent.trim() === year
+);
+
+if (selectedItem) {
+    const timelineVideo = selectedItem.querySelector(".timeline-video iframe");
+    const videoCredit = selectedItem.querySelector(".timeline-video p");
+
+    if (timelineVideo) {
+        videoContainer.src = timelineVideo.src;
+    }
+
+    if (videoCredit) {
+        videoCreditContainer.innerHTML = videoCredit.outerHTML;
+    } else {
+        videoCreditContainer.innerHTML = ""; // Clear if no credit
+    }
+}

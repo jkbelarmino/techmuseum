@@ -453,6 +453,7 @@ p {
     position: relative;
     width: 1020px;
     height: 500px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -461,31 +462,33 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1020px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
 }
 
-
-
-.video-container p {
+.video-credits {
     position: absolute;
-    top: 0px; /* Position above the bottom edge of the video */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%);
+    top: 0px;
+    left: 0px;
     z-index: 2;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
-    background-color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 4px;
     display: inline-block;
-    margin: 0; /* Ensure no extra spacing */
 }
 
 
-.video-container p a {
-    color: #4db8ff; /* Light blue */
-    text-decoration: none; /* Removes underline */
+.video-credits p {
+    color: white;
+    font-size: 10px;
+    margin: 0;
+}
+
+.video-credits a {
+    color: #4db8ff; /* or white if you want uniform text */
+    text-decoration: none;
 }
 
 
@@ -534,8 +537,8 @@ p {
 }
 
 
-/*debugger*/ /*
-div {
+/*debugger*/ 
+/*div {
     border: 1px solid red !important;
 }*/
 
