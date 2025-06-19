@@ -107,7 +107,7 @@ p {
 /* Featured Exhibits Section */
 .exhibits {
     padding: 60px 20px;
-    background: #fff;
+    background: #f4f4f4 !important;
     text-align: center;
 }
 
@@ -613,6 +613,47 @@ p {
     margin-bottom: 20px;
   }
 }
+
+/* Base styling for all decade sections */
+.timeline-decade80s,
+.timeline-decade90s,
+.timeline-decade2000s,
+.timeline-decade2010s,
+.timeline-decade2020s {
+  padding: 60px 20px;
+}
+
+/* Individual background colors */
+.timeline-decade80s, .timeline-decade2000s, .timeline-decade2020s  {
+  background-color: #fff; /* Light gray (1980s) */
+}
+
+.timeline-decade90s,.timeline-decade2010s {
+  background-color: #f4f4f4; /* White (1990s) */
+}
+
+.desc-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Override for desktop view (≥992px) */
+@media (min-width: 992px) {
+  .desc-img img {
+    width: 545px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .desc-img {
+    margin-top: 1.5rem; /* Adds ~24px space */
+  }
+}
+
 
 
 /*debugger*/ 
