@@ -623,15 +623,17 @@ p {
 
 /* Responsive Design */
 
-@media (hover: none) and (pointer: coarse) {
+/* Only apply hover flip on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
   .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-
-  .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
 }
+/* Mobile/tablet tap-based flip support */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
 
 
 
