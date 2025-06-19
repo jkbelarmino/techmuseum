@@ -536,6 +536,84 @@ p {
     transform: scale(1.1);
 }
 
+/* Carousel container and layout */
+#exhibitCarousel {
+  position: relative;
+  padding-bottom: 50px; /* Space below cards for indicators */
+  overflow: visible;
+}
+
+.carousel-inner {
+  padding: 20px 0;
+  overflow: visible;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card styling */
+.card {
+  max-width: 320px;
+}
+
+/* Carousel indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  height: auto;
+  min-height: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+
+/* Indicator dots */
+.carousel-indicators [data-bs-target] {
+  pointer-events: auto;
+  background-color: #6b6a6a !important; /* medium gray */
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  margin: 0 5px;
+  transition: opacity 0.3s ease;
+  border: none;
+}
+
+/* Active indicator */
+.carousel-indicators .active {
+  background-color: #1f0cce !important; /* darker gray */
+  opacity: 1;
+}
+
+.carousel-item {
+  padding: 40px 20px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .carousel-item .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-item .col-md-6 {
+    width: 100%;
+  }
+
+  .carousel-item img {
+    margin-bottom: 20px;
+  }
+}
+
 
 /*debugger*/ 
 /*div {
