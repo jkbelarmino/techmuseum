@@ -623,6 +623,18 @@ p {
 
 /* Responsive Design */
 
+@media (hover: none) and (pointer: coarse) {
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+
+
 @media screen and (max-width: 900px) { /* Tablet & Mobile */
     .nav-scroll {
         overflow-x: auto;
