@@ -12,23 +12,46 @@
 </head>
 <body>
 
+    
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-museum"></i> Tech Museum</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="fa-solid fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#timeline"><i class="fa-solid fa-clock"></i> Timeline</a></li>
-                <li class="nav-item"><a class="nav-link" href="featured-exhibits.html"><i class="fa-solid fa-box-open"></i> Exhibits</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fa-solid fa-museum"></i><span> Tech Museum</span>
+    </a>
+
+    <!-- Toggle is visually hidden on mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="fa-solid fa-bars"></span>
+    </button>
+
+    <div class="navbar-collapse" id="navMenu">
+      <ul class="navbar-nav w-100 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link hide-on-mobile" href="index.html">
+            <i class="fa-solid fa-house"></i><span> Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#timeline">
+            <i class="fa-solid fa-clock"></i><span> Timeline</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="featured-exhibits.html">
+            <i class="fa-solid fa-box-open"></i><span> Exhibits</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="fa-solid fa-envelope"></i><span> Contact</span>
+          </a>
+        </li>
+      </ul>
     </div>
-</nav>
+  </div>
+</nav>    
 
 <!-- Header -->
 <header class="hero exhibits-hero">

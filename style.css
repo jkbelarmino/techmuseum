@@ -727,3 +727,138 @@ p {
         display: none;
     }
 }
+
+/*NEW CODE*/
+/* PC View Styles */
+@media (min-width: 1025px) {
+  .navbar {
+    background-color: #0056b3 !important;
+    padding: 15px 30px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .navbar-nav {
+    gap: 30px;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #cce6ff !important;
+  }
+
+  .fa-solid {
+    margin-right: 6px;
+  }
+
+  /* Hide Bootstrap's hamburger on PC */
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 48px;
+    background-color: #0056b3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .navbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 12px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    font-size: 18px;
+    color: white !important;
+  }
+
+  .navbar-brand span {
+    display: none;
+  }
+
+  .navbar-brand i {
+    font-size: 20px;
+    color: white;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    max-width: 220px;
+    flex: none;
+    padding-top: 6px; /* adjust this value as needed */
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end;
+    height: 100%;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    color: white !important;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .nav-link i {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link.hide-on-mobile {
+    display: none !important;
+  }
+}
