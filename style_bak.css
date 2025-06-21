@@ -1,0 +1,1044 @@
+/* Global Font Setup */
+body {
+    font-family: "Inter", "Nunito", "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+/* Paragraphs & General Text */
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Navbar */
+.navbar {
+    font-family: "Inter", sans-serif;
+    padding: 15px 0;
+    background: #005fa3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adds uniform spacing */
+}
+
+
+.navbar-nav .nav-item a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5); /* Soft grey shadow */
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link i {
+    margin-right: 10px; /* Adds space after the icon */
+    display: inline-block; /* Ensures spacing behaves correctly */
+}
+
+
+.nav-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: url('assets/images/hero.png') no-repeat center center / cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 22px;
+    color: #f4f4f4;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.footer p {
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* Featured Exhibits Section */
+.exhibits {
+    padding: 60px 20px;
+    background: #f4f4f4 !important;
+    text-align: center;
+}
+
+.exhibits h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Exhibit Navigation Buttons */
+.exhibit-nav {
+    margin-bottom: 50px;
+}
+
+.exhibit-nav .btn {
+    margin: 5px;
+    background-color: #f0d647;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.exhibit-nav .btn:hover {
+    background-color: #db8f03;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* Responsive Exhibit Card Layout */
+.exhibit-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Exhibit Cards */
+.exhibit-card {
+    width: 100%;
+    min-width: 300px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    perspective: 1000px; /* Added flip effect here */
+    overflow: hidden; /* Prevents overflow */
+    position: relative; /* Ensures card layers stay inside */
+}
+
+.exhibit-card:hover {
+    transform: scale(1.03);
+}
+
+.exhibit-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Exhibit Card Image */
+.exhibit-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Year Formatting */
+.exhibit-card .year {
+    font-weight: bold;
+}
+
+/* Wrapper */
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*FLIP*/
+.card-inner {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* Ensure Flip Animation Works */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.exhibit-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* FlipCard */
+.flip-card {
+    width: 100%;
+    height: auto; /* Allow the card to expand based on content */
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    min-height: 510px; /* Set a minimum height to prevent shrinking */
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    min-height: 350px; /* Ensure enough space for content */
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.flip-card-front {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.timeline-g-title {
+    text-align: center;
+    width: 100%;
+    margin: 20px auto; /* Adds spacing */
+}
+
+
+/* Timeline Section */
+.timeline {
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.timeline-item {
+    display: none;
+    align-items: center;
+    gap: 0px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #0077cc;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.timeline-item.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/* Timeline Graph */
+.timeline-graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+    padding: 30px 0;
+   
+}
+
+.timeline-graph::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0077cc;
+    transform: translateY(-50%);
+}
+
+/* Timeline Nodes */
+.timeline-node {
+    width: 20px;
+    height: 20px;
+    background-color: #0077cc; /* Default Blue */
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Outer circle effect */
+.timeline-node::before {
+    content: "";
+    position: absolute;
+    width: 35px; /* Larger than the inner dot */
+    height: 35px;
+    border: 2px solid #cc0033; /* Red outline */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show outer circle on hover */
+.timeline-node:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Keep outer circle visible when clicked */
+.timeline-node.clicked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Ensure year appears below the dot */
+.timeline-node::after {
+    content: attr(data-year); /* Uses the year from HTML */
+    position: absolute;
+    top: 30px; /* Adjust downward */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.timeline h4 {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+.timeline-year-container {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+}
+
+.timeline-year {
+    margin: 0;
+    padding: 0px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.timeline-img {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-img img {
+    width: 150px;
+    height: 215px;
+    border-radius: 5px; /* Optional styling */
+    display: block;
+    margin-right: 20px; /* Moves image slightly to the left */
+    margin-left: -10px;
+}
+
+
+.timeline-node.highlight,
+.timeline-node.clicked {
+    background-color: #cc0033;
+    transform: scale(1.2);
+}
+
+/* Year Box */
+.timeline-year {
+    flex: 0 0 100px; /* Ensures a fixed width */
+    width: 100px;
+    height: 215px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: #8f1814;
+    background: #f3ebeb;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg); /* Rotates text sideways */
+    writing-mode: vertical-rl; /* Ensures vertical text alignment */
+}
+
+.timeline h2, .timeline-summary p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.timeline-video iframe {
+    display: none; /* Hides only the video inside the timeline item */
+}
+
+.timeline-video p {
+    display: none; /* Hide the video credit inside timeline-video */
+/*    font-size: 12px; /* Adjust as needed */
+}
+
+.timeline-video iframe {
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 1020px;
+    height: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-credits {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    font-size: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+
+.video-credits p {
+    color: white;
+    font-size: 10px;
+    margin: 0;
+}
+
+.video-credits a {
+    color: #4db8ff; /* or white if you want uniform text */
+    text-decoration: none;
+}
+
+
+.bottom-timeline-graph {
+    /* Inherits properties from .timeline-graph */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+    padding: 30px 0;
+}
+
+.bottom-timeline-graph::before {
+    /* Inherits styling */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0077cc;
+    transform: translateY(-50%);
+}
+
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077cc;
+    border: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background-color: #005fa3;
+    transform: scale(1.1);
+}
+
+/* Carousel container and layout */
+#exhibitCarousel {
+  position: relative;
+  padding-bottom: 50px; /* Space below cards for indicators */
+  overflow: visible;
+}
+
+.carousel-inner {
+  padding: 20px 0;
+  overflow: visible;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card styling */
+.card {
+  max-width: 320px;
+}
+
+/* Carousel indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  height: auto;
+  min-height: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+
+/* Indicator dots */
+.carousel-indicators [data-bs-target] {
+  pointer-events: auto;
+  background-color: #6b6a6a !important; /* medium gray */
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  margin: 0 5px;
+  transition: opacity 0.3s ease;
+  border: none;
+}
+
+/* Active indicator */
+.carousel-indicators .active {
+  background-color: #1f0cce !important; /* darker gray */
+  opacity: 1;
+}
+
+.carousel-item {
+  padding: 40px 20px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .carousel-item .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-item .col-md-6 {
+    width: 100%;
+  }
+
+  .carousel-item img {
+    margin-bottom: 20px;
+  }
+}
+
+/*BUTTONS*/
+.btn-current {
+  position: relative !important;
+  background-color: #8b0a0a !important;
+  font-weight: bold;
+  color: #FFF !important;
+}
+
+.btn-current::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; /* adjust spacing under button */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #8b0a0a; /* match button color (e.g., #000 for btn-dark) */
+}
+
+
+/*TIMELINE BY ERA*/
+.era-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.era-year h4 {
+  border-right: 2px solid #ddd;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-era-single {
+  width: 100%;
+  max-width: none;
+}
+
+.card-img-era {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* Tablet view (≤ 991px) */
+@media (max-width: 991.98px) {
+  .card-img-era {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10px;    
+  }
+}
+
+/* Mobile view (≤ 575px) */
+@media (max-width: 575.98px) {
+  .card-img-era {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+.era-dot {
+  position: absolute;
+  top: 50%;
+  right: 17px; /* place just to the right of the border */
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #8b0a0a;
+  border-radius: 50%;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 94px; /* aligns with the center of era-year */
+  width: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+
+
+
+
+/*debugger*/ 
+/*div {
+    border: 1px solid red !important;
+}*/
+
+
+/* Responsive Design */
+
+/* Only apply hover flip on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+/* Mobile/tablet tap-based flip support */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+
+
+@media screen and (max-width: 900px) { /* Tablet & Mobile */
+    .nav-scroll {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px;
+        display: flex;
+        gap: 15px;
+        scrollbar-width: none; /* Hides scrollbar */
+    }
+
+    .nav-scroll::-webkit-scrollbar {
+        display: none; /* Hides scrollbar on WebKit browsers */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .exhibit-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .navbar-nav {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) { /* Mobile */
+    .navbar-nav {
+        display: flex;
+        overflow-x: auto; /* Enables horizontal scrolling */
+        white-space: nowrap; /* Prevents wrapping */
+        gap: 15px; /* Adds spacing between items */
+        padding: 10px;
+        scrollbar-width: none; /* Hides scrollbar (optional) */
+    }
+
+    .navbar-nav::-webkit-scrollbar {
+        display: none; /* Hides scrollbar for WebKit browsers */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-link {
+        padding: 0px 0px !important; /* Reduces vertical padding */
+    }
+
+    .navbar-nav .nav-item {
+        line-height: 1.0 !important; /* Compresses space between links */
+        margin-bottom: 10px !important; /* Adjust vertical spacing */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-link {
+        font-size: 20px !important; /* Increases text size */
+        padding: 12px 20px; /* Adds more button-like spacing */
+        display: block; /* Ensures full-width tap area */
+        text-align: center; /* Centers text */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 8px; /* Adds slight vertical spacing */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-link {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.2); /* Slight enlargement */
+    }
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-year {
+        width: 100%;
+        text-align: left;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .exhibit-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) { /* Tablet & Mobile */
+    .bottom-timeline-graph {
+        display: flex; /* Show only on mobile/tablet */
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin: 30px auto;
+        padding: 30px 0;
+    }
+}
+
+@media (min-width: 769px) { /* Desktop */
+    .bottom-timeline-graph {
+        display: none; /* Hide on larger screens */
+    }
+}
+
+@media screen and (max-width: 900px) { /* Tablet & Mobile */
+    .exhibit-container {
+        display: flex;
+        flex-direction: column; /* Stack items */
+        align-items: center; /* Center the cards */
+        gap: 20px; /* Adds spacing */
+        padding: 0;
+    }
+
+    .exhibit-card {
+        width: 90%; /* Avoid full-screen stretching */
+        max-width: 400px; /* Limits expansion */
+        box-sizing: border-box; /* Prevents overflow */
+    }
+}
+
+@media (max-width: 1024px) { /* Applies to tablets and smaller devices */
+    .timeline-year {
+        writing-mode: horizontal-tb; /* Makes text horizontal */
+        transform: none; /* Removes rotation */
+        width: 100%;
+        height: auto;
+        font-size: 24px; /* Adjust font size for mobile */
+        padding: 10px;
+        margin-bottom: 20px; /* Adds space below timeline year */
+    }
+}
+
+@media (min-width: 1025px) {
+    .video-wrapper {
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1020px) {
+    .video-container {
+        width: 100%;
+        height: auto;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .timeline-img {
+        display: none;
+    }
+}
+
+/*NEW CODE*/
+/* PC View Styles */
+@media (min-width: 1025px) {
+  .navbar {
+    background-color: #0056b3 !important;
+    padding: 15px 30px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .navbar-nav {
+    gap: 30px;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #cce6ff !important;
+  }
+
+  .fa-solid {
+    margin-right: 6px;
+  }
+
+  /* Hide Bootstrap's hamburger on PC */
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 48px;
+    background-color: #0056b3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .navbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 12px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    font-size: 18px;
+    color: white !important;
+  }
+
+  .navbar-brand span {
+    display: none;
+  }
+
+  .navbar-brand i {
+    font-size: 20px;
+    color: white;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    max-width: 220px;
+    flex: none;
+    padding-top: 6px; /* adjust this value as needed */
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end;
+    height: 100%;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    color: white !important;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .nav-link i {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link.hide-on-mobile {
+    display: none !important;
+  }
+}
