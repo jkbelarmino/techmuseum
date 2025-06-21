@@ -633,8 +633,8 @@ p {
 }
 
 .desc-img img {
-  width: 300px;
-  height: 200px;
+  width: 300px !important;
+  height: 200px !important;
   object-fit: cover;
   display: block;
   margin: 0 auto;
