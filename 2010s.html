@@ -15,17 +15,34 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
+  <div class="container align-items-center d-flex">
+
+    <!-- Logo -->
+    <a class="navbar-brand me-3" href="index.html">
       <i class="fa-solid fa-museum"></i><span> Tech Museum</span>
     </a>
 
-    <!-- Toggle is visually hidden on mobile -->
+    <!-- Search Bar (Desktop Only) -->
+    <form class="d-none d-lg-block me-auto" role="search" onsubmit="return false;">
+      <div class="input-group">
+        <input 
+          class="form-control form-control-sm" 
+          type="search" 
+          placeholder="Search exhibits..." 
+          id="searchInput">
+        <span class="input-group-text text-danger d-none" id="noMatchIcon">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </span>
+      </div>
+    </form>
+
+    <!-- Mobile Menu Toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="fa-solid fa-bars"></span>
     </button>
 
-    <div class="navbar-collapse" id="navMenu">
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav w-100 justify-content-end">
         <li class="nav-item">
           <a class="nav-link hide-on-mobile" href="index.html">
@@ -49,8 +66,29 @@
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
+
+<!-- Mobile/Tablet Search Bar -->
+<div class="mobile-search d-block d-lg-none">
+  <form role="search" onsubmit="return false;">
+    <div class="input-group">
+      <input 
+        type="search" 
+        class="form-control form-control-sm" 
+        id="searchInputMobile" 
+        placeholder="Search exhibits...">
+      <span class="input-group-text text-danger d-none" id="noMatchIconMobile">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </span>
+    </div>
+  </form>
+</div>
+<div class="spacer">&nbsp;</div>
+<div class="spacer">&nbsp;</div>
+<div class="spacer">&nbsp;</div>
+
 <!-- Header -->
 <header class="hero exhibits-hero">
     <div class="container">
@@ -656,29 +694,29 @@
 </div>
 <!-- Back to Top Button -->
 <button onclick="topFunction()" id="backToTop" class="btn btn-primary">
-    <i class="fa fa-arrow-up"></i> Back to Top
+  <i class="fa fa-arrow-up"></i> <span>Back to Top</span>
 </button>
-<script>
-    // Show/hide Back to Top button based on scroll position
-    window.onscroll = function () {
-        var button = document.getElementById("backToTop");
-        if (document.documentElement.scrollTop > 200) {
-            button.style.display = "block";
-        } else {
-            button.style.display = "none";
-        }
-    };
 
-    function topFunction() {
-        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+<script>
+  // Show/hide Back to Top button based on scroll position
+  window.onscroll = function () {
+    const button = document.getElementById("backToTop");
+    button.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+  };
+
+  function topFunction() {
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
+
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
         <p>&copy; 2025 Tech Museum | Designed with history in mind</p>
     </div>
 </footer>
+<script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

@@ -25,7 +25,8 @@ p {
 .navbar {
     font-family: "Inter", sans-serif;
     padding: 15px 0;
-    background: #005fa3;
+    background: #005fa3 !important;
+    background-color: #005fa3 !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -40,9 +41,9 @@ p {
 
 
 .navbar-nav .nav-item a:hover {
-    color: #ffcc00;
+    color: #ffcc00 !important;
     transform: scale(1.1);
-    text-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5); /* Soft grey shadow */
+    text-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5) !important; /* Soft grey shadow */
     transition: 0.3s ease-in-out;
 }
 
@@ -59,6 +60,53 @@ p {
 .nav-link:hover {
     transform: scale(1.1);
 }
+
+.navbar input[type="search"] {
+  border-radius: 4px;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.navbar form {
+  max-width: 300px;
+  flex-shrink: 1;
+}
+
+@media (max-width: 991.98px) {
+  .mobile-search {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* Above most content but below modals */
+    background-color: #005fa3;
+    padding: 10px 15px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobile-search input {
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .mobile-search .input-group-text {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  body {
+    padding-bottom: 70px; /* Make room for the sticky search bar */
+  }
+}
+
+}
+
+
 
 
 /* Hero Section */
@@ -534,6 +582,19 @@ p {
 #backToTop:hover {
     background-color: #005fa3;
     transform: scale(1.1);
+}
+
+/* On mobile and tablet, nudge it above the sticky search bar */
+@media (max-width: 991.98px) {
+  #backToTop {
+    font-size: 1.25rem;
+    padding: 8px 12px;
+    bottom: 60px; /* ⬅ Raise this to float above your search bar */
+  }
+
+  #backToTop i + span {
+    display: none;
+  }
 }
 
 /* Carousel container and layout */
