@@ -63,3 +63,46 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const inputs = {
+    searchInput: document.getElementById('searchInput'),
+    searchInputMobile: document.getElementById('searchInputMobile')
+  };
+  const icons = {
+    searchInput: document.getElementById('noMatchIcon'),
+    searchInputMobile: document.getElementById('noMatchIconMobile')
+  };
+
+  // "No results" message
+  let noResults = document.createElement('div');
+  noResults.id = 'noResults';
+  noResults.textContent = 'No exhibits match your search.';
+  noResults.style.cssText = 'display: none; padding: 1rem; text-align: center; color: #888; font-weight: bold;';
+  document.body.appendChild(noResults);
+
+  const handleSearch = (input, icon) => {
+    const query = input.value.toLowerCase();
+    let found = false;
+
+    document.querySelectorAll('.exhibit-card').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const match = text.includes(query);
+      card.style.display = match ? '' : 'none';
+      if (match) found = true;
+    });
+
+    noResults.style.display = query && !found ? 'block' : 'none';
+    icon.classList.toggle('d-none', query === '' || found);
+  };
+
+  Object.entries(inputs).forEach(([id, input]) => {
+    const icon = icons[id];
+    input?.addEventListener('input', () => handleSearch(input, icon));
+    icon?.addEventListener('click', () => {
+      input.value = '';
+      handleSearch(input, icon);
+    });
+  });
+});
+
