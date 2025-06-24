@@ -108,19 +108,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll(".era-item");
-  let currentYear = "";
+  const indicator = document.getElementById("floating-year");
+
+  let closestSection = null;
+  let closestOffset = Infinity;
 
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.top < window.innerHeight * 0.4) {
-      const h4 = section.querySelector("h4");
-      const yearText = h4?.textContent;
-      const match = yearText?.match(/\d{4}/);
-      if (match) currentYear = match[0];
+    const offset = Math.abs(rect.top - window.innerHeight * 0.3); // target 30% from top
+
+    if (offset < closestOffset && rect.bottom > 0) {
+      closestOffset = offset;
+      closestSection = section;
     }
   });
 
-  if (currentYear) {
-    document.getElementById("floating-year").textContent = currentYear;
+  if (closestSection) {
+    const yearText = closestSection.querySelector("h4")?.textContent;
+    const match = yearText?.match(/\d{4}/);
+    if (match) {
+      indicator.textContent = match[0];
+    }
   }
 });
