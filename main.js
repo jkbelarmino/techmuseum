@@ -106,3 +106,21 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll(".era-item");
+  let currentYear = "";
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top < window.innerHeight * 0.4) {
+      const h4 = section.querySelector("h4");
+      const yearText = h4?.textContent;
+      const match = yearText?.match(/\d{4}/);
+      if (match) currentYear = match[0];
+    }
+  });
+
+  if (currentYear) {
+    document.getElementById("floating-year").textContent = currentYear;
+  }
+});
