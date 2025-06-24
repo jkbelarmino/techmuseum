@@ -138,7 +138,22 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"fullName1","qid":"1","text":"Full N
   <div class="spacer">&nbsp;</div>
   </div>
  </div>
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTop" class="btn btn-primary">
+  <i class="fa fa-arrow-up"></i> <span>Back to Top</span>
+</button>
 
+<script>
+  // Show/hide Back to Top button based on scroll position
+  window.onscroll = function () {
+    const button = document.getElementById("backToTop");
+    button.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+  };
+
+  function topFunction() {
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 <footer class="footer">
     <div class="container">
         <p>&copy; 2025 Tech Museum | Designed with history in mind</p>
