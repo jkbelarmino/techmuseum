@@ -1,28 +1,28 @@
 window.addEventListener('DOMContentLoaded', () => {
+  const floatingYear = document.getElementById("floating-year");
+  const eraItems = document.querySelectorAll(".era-item");
   const inputs = {
     searchInput: document.getElementById('searchInput'),
     searchInputMobile: document.getElementById('searchInputMobile')
   };
-
   const icons = {
     searchInput: document.getElementById('noMatchIcon'),
     searchInputMobile: document.getElementById('noMatchIconMobile')
   };
 
-  // Prevent form submission
+  // Prevent search form submission
   document.querySelectorAll('form[role="search"]').forEach(form => {
     form.addEventListener('submit', e => e.preventDefault());
   });
 
-  // "No results" message
+  // Create and inject "No results" message
   const noResults = document.createElement('div');
   noResults.id = 'noResults';
   noResults.textContent = 'No exhibits match your search.';
-  noResults.style.cssText =
-    'display: none; padding: 1rem; text-align: center; color: #888; font-weight: bold;';
+  noResults.style.cssText = 'display: none; padding: 1rem; text-align: center; color: #888; font-weight: bold;';
   document.body.appendChild(noResults);
 
-  // Shared search logic
+  // 🔍 Search logic
   const handleSearch = (inputEl, iconEl) => {
     const query = inputEl.value.toLowerCase();
     let found = false;
@@ -44,8 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
     iconEl.classList.toggle('d-none', query === '' || found);
   };
 
-  Object.entries(inputs).forEach(([id, inputEl]) => {
-    const iconEl = icons[id];
+  // Bind search inputs and clear buttons
+  Object.entries(inputs).forEach(([key, inputEl]) => {
+    const iconEl = icons[key];
     if (!inputEl || !iconEl) return;
 
     inputEl.addEventListener('input', () => handleSearch(inputEl, iconEl));
@@ -54,21 +55,37 @@ window.addEventListener('DOMContentLoaded', () => {
       handleSearch(inputEl, iconEl);
     });
   });
-});
 
+  // 🕰 Floating year visibility + year tracking
+  window.addEventListener("scroll", () => {
+    let anyVisible = false;
+    let closestItem = null;
+    let closestOffset = Infinity;
 
-const floatingYear = document.getElementById("floating-year");
+    eraItems.forEach(item => {
+      const rect = item.getBoundingClientRect();
 
-window.addEventListener("scroll", () => {
-  const timelineItems = document.querySelectorAll(".era-item");
-  let anyVisible = false;
+      // Show if any timeline item is on screen
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        anyVisible = true;
+      }
 
-  timelineItems.forEach(item => {
-    const rect = item.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      anyVisible = true;
+      // Track closest item for updating year
+      const offset = Math.abs(rect.top - window.innerHeight * 0.3);
+      if (offset < closestOffset && rect.bottom > 0) {
+        closestOffset = offset;
+        closestItem = item;
+      }
+    });
+
+    floatingYear.classList.toggle("visible", anyVisible);
+
+    if (closestItem) {
+      const yearText = closestItem.querySelector("h4")?.textContent;
+      const match = yearText?.match(/\d{4}/);
+      if (match) {
+        floatingYear.textContent = match[0];
+      }
     }
   });
-
-  floatingYear.classList.toggle("visible", anyVisible);
 });
