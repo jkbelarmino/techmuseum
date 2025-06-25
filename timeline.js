@@ -15,3 +15,4 @@ window.addEventListener("scroll", () => {
     document.getElementById("year-indicator").textContent = currentYear;
   }
 });
+

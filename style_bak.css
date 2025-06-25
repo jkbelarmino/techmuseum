@@ -771,8 +771,14 @@ p {
   padding: 10px 15px;
   border-radius: 0 6px 6px 0;
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   pointer-events: none;
-  transition: all 0.3s ease;
+}
+
+#floating-year.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #floating-year::after {

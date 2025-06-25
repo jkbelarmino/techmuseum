@@ -14,49 +14,41 @@ window.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', e => e.preventDefault());
   });
 
-  // Create "No results" message
+  // "No results" message
   const noResults = document.createElement('div');
   noResults.id = 'noResults';
   noResults.textContent = 'No exhibits match your search.';
   noResults.style.cssText =
-    'display: none; padding: 1rem; text-align: center; font-weight: bold; color: #888;';
+    'display: none; padding: 1rem; text-align: center; color: #888; font-weight: bold;';
   document.body.appendChild(noResults);
 
-  // Core search logic
+  // Shared search logic
   const handleSearch = (inputEl, iconEl) => {
     const query = inputEl.value.toLowerCase();
-    let matchFound = false;
+    let found = false;
     let firstVisible = null;
 
     document.querySelectorAll('.card-era-single').forEach(card => {
       const section = card.closest('section.era-item');
-      const text = card.textContent.toLowerCase();
-      const isMatch = text.includes(query);
-
-      section.style.display = isMatch ? '' : 'none';
-      if (isMatch && !firstVisible) firstVisible = section;
-      if (isMatch) matchFound = true;
+      const match = card.textContent.toLowerCase().includes(query);
+      section.style.display = match ? '' : 'none';
+      if (match && !firstVisible) firstVisible = section;
+      if (match) found = true;
     });
 
-    // Scroll to match
     if (firstVisible && query) {
       firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    // Toggle "No results"
-    noResults.style.display = matchFound || !query ? 'none' : 'block';
-
-    // Toggle icon visibility
-    iconEl.classList.toggle('d-none', query === '' || matchFound);
+    noResults.style.display = query && !found ? 'block' : 'none';
+    iconEl.classList.toggle('d-none', query === '' || found);
   };
 
-  // Set up listeners for both inputs
   Object.entries(inputs).forEach(([id, inputEl]) => {
     const iconEl = icons[id];
+    if (!inputEl || !iconEl) return;
 
     inputEl.addEventListener('input', () => handleSearch(inputEl, iconEl));
-
-    // Allow red X to clear the input and reset results
     iconEl.addEventListener('click', () => {
       inputEl.value = '';
       handleSearch(inputEl, iconEl);
@@ -64,70 +56,19 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  const inputs = {
-    searchInput: document.getElementById('searchInput'),
-    searchInputMobile: document.getElementById('searchInputMobile')
-  };
-  const icons = {
-    searchInput: document.getElementById('noMatchIcon'),
-    searchInputMobile: document.getElementById('noMatchIconMobile')
-  };
 
-  // "No results" message
-  let noResults = document.createElement('div');
-  noResults.id = 'noResults';
-  noResults.textContent = 'No exhibits match your search.';
-  noResults.style.cssText = 'display: none; padding: 1rem; text-align: center; color: #888; font-weight: bold;';
-  document.body.appendChild(noResults);
-
-  const handleSearch = (input, icon) => {
-    const query = input.value.toLowerCase();
-    let found = false;
-
-    document.querySelectorAll('.exhibit-card').forEach(card => {
-      const text = card.textContent.toLowerCase();
-      const match = text.includes(query);
-      card.style.display = match ? '' : 'none';
-      if (match) found = true;
-    });
-
-    noResults.style.display = query && !found ? 'block' : 'none';
-    icon.classList.toggle('d-none', query === '' || found);
-  };
-
-  Object.entries(inputs).forEach(([id, input]) => {
-    const icon = icons[id];
-    input?.addEventListener('input', () => handleSearch(input, icon));
-    icon?.addEventListener('click', () => {
-      input.value = '';
-      handleSearch(input, icon);
-    });
-  });
-});
+const floatingYear = document.getElementById("floating-year");
 
 window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll(".era-item");
-  const indicator = document.getElementById("floating-year");
+  const timelineItems = document.querySelectorAll(".era-item");
+  let anyVisible = false;
 
-  let closestSection = null;
-  let closestOffset = Infinity;
-
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    const offset = Math.abs(rect.top - window.innerHeight * 0.3); // target 30% from top
-
-    if (offset < closestOffset && rect.bottom > 0) {
-      closestOffset = offset;
-      closestSection = section;
+  timelineItems.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      anyVisible = true;
     }
   });
 
-  if (closestSection) {
-    const yearText = closestSection.querySelector("h4")?.textContent;
-    const match = yearText?.match(/\d{4}/);
-    if (match) {
-      indicator.textContent = match[0];
-    }
-  }
+  floatingYear.classList.toggle("visible", anyVisible);
 });
