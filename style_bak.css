@@ -739,7 +739,7 @@ p {
 .era-dot {
   position: absolute;
   top: 50%;
-  right: 62px; /* place just to the right of the border */
+  right: 57px; /* place just to the right of the border */
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
@@ -752,7 +752,7 @@ p {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50px; /* aligns with the center of era-year */
+  left: 55px; /* aligns with the center of era-year */
   width: 2px;
   background-color: #ccc;
   z-index: 0;
@@ -774,6 +774,20 @@ p {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
+#floating-year::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px; /* controls distance from box */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid rgba(136, 14, 14, 0.7);
+}
+
 
 @media (max-width: 991.98px) {
   #floating-year {
