@@ -763,18 +763,22 @@ p {
   position: fixed;
   top: 50%;
   left: 0;
+  width: clamp(50px, 11vw, 350px); /* scales fluidly between min and max */
   transform: translateY(-50%);
   font-size: 2rem;
   font-weight: bold;
   background: rgba(136, 14, 14, 0.7);
   color: #fff;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 0 6px 6px 0;
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
+  text-align: right;
 }
+
+
 
 #floating-year.visible {
   opacity: 1;
