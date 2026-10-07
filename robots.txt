@@ -1,0 +1,6 @@
+# https://robotstxt.org
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://github.io
