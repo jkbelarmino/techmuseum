@@ -1,75 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.io</loc>
-    <priority>1.00</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/80s.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.90</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/90s.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/2000s.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/2010s.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/2020s.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/ByEra.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-all.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.85</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-category.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.80</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-computers.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.75</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-consoles.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.75</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-media-players.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.75</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-phones.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.75</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-websites.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.75</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-accessories.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.75</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/featured-exhibits-other.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.70</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/contact.html</loc>
   </url>
   <url>
-    <loc>https://github.io</loc>
-    <priority>0.70</priority>
+    <loc>https://jkbelarmino.github.io/techmuseum/</loc>
   </url>
 </urlset>
