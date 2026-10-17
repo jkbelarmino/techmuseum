@@ -1,35 +1,47 @@
-# 🧠 Tech Museum: Filipino Consumer Tech Archive
+# 🕰️ Tech Museum
 
-Welcome to the **Tech Museum**, a curated digital archive dedicated to the real-world innovations, platforms, and gadgets that shaped Filipino consumer technology. This project documents verified releases, overlooked milestones, and the labor behind the interfaces we use every day.
+An immersive, curated digital archive exploring the profound evolution of consumer electronics, computing architecture, and media innovations from the 1980s to the 2020s.
 
-🔗 **Live Site**: [jkbelarmino.github.io/techmuseum](https://jkbelarmino.github.io/techmuseum/)
+This repository serves as a personal time capsule documenting the iconic hardware and digital milestones that defined generations.
 
----
-
-## 🎯 Purpose
-
-This museum honors Filipino ingenuity by:
-- Archiving **actual released products** (not speculative concepts)
-- Highlighting **firsts**, forgotten platforms, and regional innovations
-- Insisting on **proper attribution**, factual discipline, and emotional clarity
-
-Whether you're a researcher, designer, developer, or curious visitor—this space invites you to explore the legacy of Filipino tech through a modular, mobile-first lens.
+🌐 **Live Museum Site:** [https://jkbelarmino.github.io/techmuseum/](https://jkbelarmino.github.io/techmuseum/)
+📬 **Official Contact:** [https://jotform.com](https://jotform.com)
 
 ---
 
-## 🧩 Features
+## 🏛️ Project Purpose & Inspiration
 
-- 📱 **Mobile-first interface** with bold, calculator-style aesthetics  
-- 🗂️ **Filterable archive** by category, year, and platform  
-- 🧾 **Verified entries** with sources and historical context  
-- 🧠 **Modular design** for iterative expansion and community input  
-- 🧪 Built with HTML, CSS, JavaScript, and responsive layout principles
+This museum was created not merely to index historical hardware specifications, but to preserve the deep nostalgia and personal memories attached to the technologies we grew up with. 
+
+From the click wheel of a first-generation iPod to the distinct urban connection of a vintage PLDT red payphone, each exhibit captures a specific moment in time where analog lifestyle shifted into a connected, digital landscape.
 
 ---
 
-## 🛠️ Tech Stack
+## 💾 What's Inside the Collection
 
-- HTML5 / CSS3 / JavaScript  
-- Modular layout system  
-- Responsive design  
-- Manual curation and QA
+The museum layout organizes structural tech artifacts across comprehensive, specialized galleries:
+
+* **💻 Computers:** Luggable early laptops, green monochrome CRTs, and foundational home computing workhorses like the Apple IIe.
+* **🎮 Consoles:** 8-bit and 16-bit gaming icons like the NES and Sega Mega Drive that brought interactive arcade magic into our living rooms.
+* **📱 Phones:** Rugged car bag phones, classic indestructible Nokia bricks, and slider keys that bridged the cellular gap to the touchscreen era.
+* **🎵 Media Players:** Cassette Walkmans, portable Discmans, and pocket flash MP3 rebels that transformed music into a private, mobile experience.
+* **🌐 Websites:** The early portal front doors of the internet, guestbooks, beveled GIF web buttons, and digital community footprints.
+* **🔌 Accessories:** Framed anti-glare screen panels, light gun peripherals, and tech-driven workflow utilities.
+
+---
+
+## 🔒 Verified Curator Footprint
+
+This project is officially maintained and curated by **Jean Kathlyn Belarmino**. To verify the authenticity of this archive and explore my other open-source tools, technical research framework, or creative coding experiments, visit my verified public hubs:
+
+* 🌐 **Official Identity Hub:** [https://jkbelarmino.github.io/](https://jkbelarmino.github.io/)
+* 💻 **GitHub Profile:** [@jkbelarmino](https://github.com)
+* 🚀 **Stack Overflow Developer Profile:** [Jean Kathlyn Belarmino](https://stackoverflow.com)
+* ✍️ **DEV.to Community:** [@jkbelarmino](https://dev.to)
+* 📖 **About.me Profile Card:** [jeankathlynbelarmino](https://about.me)
+
+---
+
+## ⚖️ Legal Disclaimer
+
+Original content, curation design, and unique item descriptions belong to their respective creators. This site is an educational, non-commercial archival project. Third-party product names, corporate logos, registered trademarks, archival images, and embedded video assets remain the absolute property of their respective owners. No copyright or trademark infringement is intended.
